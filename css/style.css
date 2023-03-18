@@ -4,7 +4,12 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgba(42, 79, 20, 0.436);
+  background: linear-gradient(
+    90deg,
+    rgba(242, 6, 6, 0.9164915966386554) 0%,
+    rgba(18, 255, 0, 0.7932422969187676) 50%,
+    rgba(0, 65, 255, 0.8268557422969187) 100%
+  );
 }
 .caja {
   width: 100vw;
@@ -24,7 +29,11 @@ body {
   gap: 5px;
 }
 .casilla {
-  background-color: rgb(217, 255, 0);
+  background: radial-gradient(
+    circle,
+    rgba(238, 211, 174, 1) 0%,
+    rgba(215, 199, 15, 0.9389005602240896) 100%
+  );
   width: 22vmin;
   height: 22vmin;
 }
