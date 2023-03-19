@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 .caja {
   width: 100vw;
@@ -36,3 +37,63 @@
   height: 22vmin;
 }
 /* -----------Style Home----------- */
+.container-home {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(
+    circle,
+    rgba(27, 17, 4, 0.6699929971988796) 0%,
+    rgba(215, 28, 15, 1) 100%
+  );
+  color: white;
+}
+.title-home {
+  position: absolute;
+  top: 50px;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .face {
+  border-radius: 10px;
+  position: absolute;
+  width: 80vmin;
+  height: 50vmax;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px black;
+  background: green;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+.card .back {
+  transform: perspective(600px) rotateY(180deg);
+  box-shadow: 0 5px 10px black;
+  background: rgb(0, 90, 128);
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
+.items {
+  width: 12vmin;
+  height: 12vmin;
+}

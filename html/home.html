@@ -5,21 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tic tac toe - Home</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <div class="contenedor-home">
-      <div class="title-home"><h1>Bienvenido</h1></div>
-      <div class="instruciones">
-        <h2>instruciones</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem a
-          libero illum quas labore incidunt quod possimus cumque amet nihil?
-        </p>
-       <button>play</button>
+    
+    <div class="container-home"> 
+        <div class="title-home"><h1>Bienvenido </h1></div>
+      <div class="card">
+        <div class="face front">
+          <h2>Información del Juego</h2>
+          <p>
+            Los jugadores se turnan para completar con sus propias fichas “X”
+            u “O”, en la cuadrícula de tres cuadros para completar la secuencia
+            de fichas y adelantarse a su oponente, ganando así el juego.
+          </p>
+          <div><img class="items" src="/multimedia/caterpie.png" alt="caterpie"></div>
+        </div>
+        <div class="face back">
+          <h2>Instruciones del Juego</h2>
+          <h3>Modo de Juego</h3>
+          <h4>Judar vs Jugador</h4>
+          <p>
+            Escribe tu nombre y selecciona tu ficha para juegar contra otros
+            jugadores, logrando hacer una secuencia de tres fichas para ganar.
+          </p>
+          <h4>Jugador vs CPU</h4>
+          <p>
+            Escribe tu nombre y selecciona tu ficha para juegar contra la
+            maquina, logrando hacer una secuencia de tres de tus fichas le
+            podras ganar.
+          </p><div><img class="items" src="/multimedia/squirtle.png" alt=""></div>
+          <button class="button">Play</button>
+        </div>
       </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
