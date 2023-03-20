@@ -17,6 +17,7 @@
     rgba(18, 255, 0, 0.7932422969187676) 50%,
     rgba(0, 65, 255, 0.8268557422969187) 100%
   );
+
 }
 .container {
   /* width: 70vmin;
@@ -177,4 +178,7 @@
   height: 100px;
   width: 100px;
   border-radius: 10px;
+}
+.ficha {
+  height: 10vmin;
 }
