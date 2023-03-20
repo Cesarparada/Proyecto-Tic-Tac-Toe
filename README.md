@@ -40,7 +40,9 @@ Se diseño una primera parte visual del juego Tic Tac Toe en un proyecto de form
 
 ## Preview
 
-
+<img src="multimedia/mobile (1).png" alt="">
+<img src="multimedia/mobile.png" alt="">
+<img src="multimedia/mobile.gif" alt="">
 
 <!-- ## 🏁 Getting Started <a name = "getting_started"></a>
 
