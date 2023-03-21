@@ -11,13 +11,16 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(242, 6, 6, 0.9164915966386554) 0%,
     rgba(18, 255, 0, 0.7932422969187676) 50%,
     rgba(0, 65, 255, 0.8268557422969187) 100%
-  );
-
+  ); */
+  background-image: url(/multimedia/tricolor.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .container {
   /* width: 70vmin;
@@ -58,7 +61,6 @@
   font-size: 2rem;
   position: absolute;
   top: 20px;
-  
 }
 .card {
   display: flex;
@@ -68,7 +70,7 @@
 .card .face {
   border-radius: 10px;
   position: absolute;
-  width: 300px;
+  width: 250px;
   height: 400px;
   backface-visibility: hidden;
   overflow: hidden;
@@ -161,7 +163,7 @@
   top: 10px;
   right: 10px;
 }
-.lbl-modal {
+.lbl-modal{
   background: #302702;
   padding: 10px 15px;
   border-radius: 4px;
@@ -179,6 +181,22 @@
   width: 100px;
   border-radius: 10px;
 }
-.ficha {
+.ficha, .ubi {
   height: 10vmin;
+}
+.buttonHome{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+.restart{
+  color: #fff;
+  width: 70px;
+  height: 25px;
+  background: #302702;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px black;
 }
