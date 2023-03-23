@@ -41,7 +41,6 @@
   width: 22vmin;
   height: 22vmin;
 }
-
 /* -----------Style Home----------- */
 .container-home {
   height: 100vh;
@@ -104,7 +103,6 @@
   width: 12vmin;
   height: 12vmin;
 }
-
 .modal {
   top: 0;
   left: 0;
@@ -127,7 +125,6 @@
   border-radius: 15px;
   width: 400px;
   height: 200px;
-
   margin: auto;
   background: #fff;
   box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
@@ -163,7 +160,7 @@
   top: 10px;
   right: 10px;
 }
-.lbl-modal{
+.lbl-modal {
   background: #302702;
   padding: 10px 15px;
   border-radius: 4px;
@@ -181,17 +178,18 @@
   width: 100px;
   border-radius: 10px;
 }
-.ficha, .ubi {
+.ficha,
+.ubi {
   height: 10vmin;
 }
-.buttonHome{
+.buttonHome {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   margin-top: 15px;
 }
-.restart{
+.restart {
   color: #fff;
   width: 70px;
   height: 25px;
