@@ -1,10 +1,28 @@
 const root = document.getElementById("root");
 
-///////Vista Inicio///////
+const game = {
+  player1: {
+    name: null,
+    mark: '<img  class="ficha" src="multimedia/Pokeball.png">',
+  },
+  player2: {
+    name: null,
+    mark: '<img class="ficha" src="multimedia/psyduck.png">',
+  },
+  maquina: {
+    name: null,
+  },
+  player: {
+    name: null,
+  },
+  winner: null,
+  iconoVs: '<img class="versus" src="multimedia/players.png">',
+  iconoCpu: '<img class="versus" src="multimedia/robot.png">',
+};
 
-const getInicioHTML= () => {
+const getInicioHTML = () => {
   return `
-  <div class="container-home">
+<div class="container-home">
       <div class="title-home"><h1>Bienvenido a Tic Tac Món</h1></div>
       <div class="card">
         <div class="face front">
@@ -46,17 +64,10 @@ const getInicioHTML= () => {
             <label for="btn-modal">x</label>
             <div class="contenido">
               <div>
-                <a href="index.html">
-                  <img
-                    class="players"
-                    src="multimedia/players.png"
-                    alt="Players"
-                /></a>
+                <button id="versus-players"> ${game.iconoVs} </button>
               </div>
               <div>
-                <a href="index.html">
-                  <img class="players" src="multimedia/robot.png" alt="Robot"
-                /></a>
+                <button id="versus-cpu"> ${game.iconoCpu} </button>
               </div>
             </div>
           </div>
@@ -66,48 +77,27 @@ const getInicioHTML= () => {
   `;
 };
 
+const setModoPlayers = () => {
+  document.getElementById("versus-players").addEventListener("click", () => {
+    const btn = document.getElementById("versus-players").value;
 
-const htmlCasillas = document.querySelectorAll(".casilla");
-const mapCasillas = [];
-let turno1 = false;
-
-function manageClick(element) {
-  console.log(element.innerHTML);
-
-  if ((element.innerHTML = " ")) {
-    if (turno1) {
-      element.innerHTML = '<img  class="ficha" src="multimedia/Pokeball.png">';
-
-      mapCasillas[element.id] = "x";
-    } else {
-      element.innerHTML = '<img class="ficha" src="multimedia/psyduck.png">';
-      mapCasillas[element.id] = "o";
-    }
-    turno1 = !turno1;
-  }
-
-  manageBoard(mapCasillas);
-}
-
-const manageBoard = (casillas) => {
-  for (let casilla of casillas) {
-    console.log(casilla);
-  }
-};
-
-for (let i = 0; i < htmlCasillas.length; i++) {
-  htmlCasillas[i].addEventListener("click", (event) => {
-    const element = event.target;
-    manageClick(element);
+    renderModel1();
+    setPlayersEventos();
   });
+};
+const setModoCpu = () => {
+  document.getElementById("versus-cpu").addEventListener("click", () => {
+    const btn = document.getElementById("versus-cpu").value;
 
-  htmlCasillas[i].id = i;
-}
-//////Vista Inicio/////////
+    renderModel2();
+    setCpuEventos();
+  });
+};
 
 const renderInicio = () => {
-    root.innerHTML = getInicioHTML();
+  root.innerHTML = getInicioHTML();
 };
-//////Llamada a la Funcion//////
 
 renderInicio();
+setModoCpu();
+setModoPlayers();

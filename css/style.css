@@ -172,7 +172,27 @@
 #btn-modal {
   display: none;
 }
-.players {
+
+.container-playersVs,
+.container-playersCpu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: radial-gradient(
+    circle,
+    rgba(238, 211, 174, 1) 0%,
+    rgba(215, 199, 15, 0.9389005602240896) 100%
+  );
+  
+}
+.versus {
   background: #fff;
   height: 100px;
   width: 100px;
