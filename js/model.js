@@ -32,11 +32,11 @@ const renderModel2 = () => {
 
 const setPlayersEventos = () => {
   document.getElementById("btn-play1").addEventListener("click", () => {
-    const name1Input = document.getElementById("player1").value;
-    const name2Input = document.getElementById("player2").value;
+    const namePlayer1 = document.getElementById("player1").value;
+    const namePlayer2 = document.getElementById("player2").value;
 
-    game.player1.name = name1Input;
-    game.player2.name = name2Input;
+    game.player1.name = namePlayer1;
+    game.player2.name = namePlayer2;
 
     renderGame();
     gameFunction();
@@ -44,11 +44,11 @@ const setPlayersEventos = () => {
 };
 const setCpuEventos = () => {
   document.getElementById("btn-play2").addEventListener("click", () => {
-    const nameInput = document.getElementById("player1").value;
-    const cpuInput = document.getElementById("player2").value;
+    const namePlayer = document.getElementById("player1").value;
+    const cpu = document.getElementById("player2").value;
 
-    game.player1.name = nameInput;
-    game.player2.name = cpuInput;
+    game.player1.name = namePlayer;
+    game.player2.name = cpu;
 
     render2();
     gameFunction();

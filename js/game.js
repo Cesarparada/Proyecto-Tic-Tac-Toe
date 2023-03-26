@@ -1,67 +1,64 @@
 const getGameHTML = () => {
   return `
     <div class="caja">
-      <div class="container">
-        <button class="casilla"></button>
-        <button class="casilla"></button>
-        <button class="casilla"></button>
-        <button class="casilla"></button>
-        <button class="casilla"></button>
-        <button class="casilla"></button>
-        <button class="casilla"></button>
-        <button class="casilla"></button>
-        <button class="casilla"></button>
-      </div>
-       <div class="buttonHome">
-        <button id="restart">Restart</button>
-        <button id="btn-inicio"><img class="ubi" src="multimedia/clipart.png" alt="ubicacion"</button>   
-      </div>
-      <div> 
-      <p id="game-view-name1">${game.player1.name}</p>
-      <p id="game-view-name2">${game.player2.name}</p>
-      </div>
-    </div>
+            <div class="players_tablero">
+                <div class="container_name1"> 
+                   <div id="view-name1"><p >${game.player1.name}</p></div>
+                   <div id="turno1">${game.player1.mark}</div>
+                </div>
+                <div class="container_name2">
+                    <div id="view-name2"><p >${game.player2.name}</p></div>
+                    <div id="turno2"></div>
+                </div>
+            </div>
+                   <div class="container">
+                      <button class="casilla"></button>
+                      <button class="casilla"></button>
+                      <button class="casilla"></button>
+                      <button class="casilla"></button>
+                      <button class="casilla"></button>
+                      <button class="casilla"></button>
+                      <button class="casilla"></button>
+                      <button class="casilla"></button>
+                      <button class="casilla"></button>
+                   </div>
+          <div class="buttonHome">
+              <button onclick="reset()" id="reset">Reset</button>
+              <a id="btn-inicio">
+                <img onclick="volverInicio()" class="ubi" src="multimedia/clipart.png" alt="ubicacion"</a>   
+          </div>
+  </div>
     `;
 };
 
-// let combinaciones = [
-//   [0, 1, 2],
-//   [3, 4, 5],
-//   [6, 7, 8],
-//   [0, 3, 6],
-//   [1, 4, 7],
-//   [2, 5, 8],
-//   [0, 4, 8],
-//   [2, 4, 6],
-// ];
 const gameFunction = () => {
   const htmlCasillas = document.querySelectorAll(".casilla");
   const mapCasillas = [];
-  let turno1 = false;
-
+  let turno1 = true;
   function manageClick(element) {
-    console.log(element.innerHTML);
+    const uiTurno1 = document.getElementById("turno1");
+    const uiTurno2 = document.getElementById("turno2");
 
-    if ((element.innerHTML = " ")) {
+    if ((element.innerHTML == "")) {
       if (turno1) {
-        element.innerHTML =
-          '<img  class="ficha" src="multimedia/Pokeball.png">';
-
+        turno1= false;
+        uiTurno1.innerHTML = game.player1.mark;
+        uiTurno2.innerHTML = " ";
+        element.innerHTML = game.player1.mark;
+        element.disabled = true;
         mapCasillas[element.id] = "x";
       } else {
-        element.innerHTML = '<img class="ficha" src="multimedia/psyduck.png">';
+        turno1 = true;
+        uiTurno1.innerHTML = " ";
+        uiTurno2.innerHTML = game.player2.mark;
+        element.innerHTML = game.player2.mark;
+        element.disabled = true;
         mapCasillas[element.id] = "o";
       }
-      turno1 = !turno1;
-    }
+     
+    //  checkWinner(mapCasillas[element.id], mapCasillas);
 
-    manageBoard(mapCasillas);
-  }
-
-  const manageBoard = (casillas) => {
-    for (let casilla of casillas) {
-      console.log(casilla);
-    }
+    };
   };
 
   for (let i = 0; i < htmlCasillas.length; i++) {
@@ -69,11 +66,22 @@ const gameFunction = () => {
       const element = event.target;
       manageClick(element);
     });
-
-    htmlCasillas[i].id = i;
   }
 };
 
+function reset() {
+  document.querySelectorAll(".container button").forEach((element) => {
+    element.innerHTML = "";
+    element.disabled = false;
+  });
+};
+
+function volverInicio() {
+  document.getElementById("btn-inicio").addEventListener("click", () => {
+    document.getElementById("btn-inicio").value;
+    renderInicio();
+  });
+};
 const renderGame = () => {
   const btnPvP = document.getElementById("btn-play1");
   btnPvP.addEventListener("click", () => {
