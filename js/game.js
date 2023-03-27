@@ -30,6 +30,7 @@ const getGameHTML = () => {
   </div>
     `;
 };
+//----------Funcion del tablero-----
 
 const gameFunction = () => {
   const htmlCasillas = document.querySelectorAll(".casilla");
@@ -56,7 +57,7 @@ const gameFunction = () => {
         mapCasillas[element.id] = "o";
       }
      
-    //  checkWinner(mapCasillas[element.id], mapCasillas);
+     checkWinner(mapCasillas[element.id], mapCasillas);
 
     };
   };
@@ -67,32 +68,35 @@ const gameFunction = () => {
       manageClick(element);
     });
   }
-};
+  };
 
-function reset() {
+  
+  function reset() {
   document.querySelectorAll(".container button").forEach((element) => {
     element.innerHTML = "";
     element.disabled = false;
   });
-};
+  };
 
-function volverInicio() {
+  function volverInicio() {
   document.getElementById("btn-inicio").addEventListener("click", () => {
     document.getElementById("btn-inicio").value;
     renderInicio();
+    setModoCpu();
+    setModoPlayers();
   });
-};
-const renderGame = () => {
+  };
+  const renderGame = () => {
   const btnPvP = document.getElementById("btn-play1");
   btnPvP.addEventListener("click", () => {
     root.innerHTML = getGameHTML();
     gameFunction();
+    
   });
-};
-const render2 = () => {
-  const btnCpu = document
-    .getElementById("btn-play2")
-    .addEventListener("click", () => {
+  };
+  const render2 = () => {
+  const btnCPU = document.getElementById("btn-play2")
+    btnCPU.addEventListener("click", () => {
       root.innerHTML = getGameHTML();
       gameFunction();
     });

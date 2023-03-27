@@ -26,7 +26,7 @@ const getInicioHTML = () => {
       <div class="title-home"><h1>Bienvenido a Tic Tac Món</h1></div>
       <div class="card">
         <div class="face front">
-          <h2>Información del Juego</h2>
+          <h2 class="titlecard">Información del Juego</h2>
           <p>
             En Tic Tac Toe los jugadores se turnan para completar con sus
             propias fichas “X” u “O”, en la cuadrícula de tres cuadros para
@@ -38,7 +38,7 @@ const getInicioHTML = () => {
           </div>
         </div>
         <div class="face back">
-          <h2>Instrucciones del Juego</h2>
+          <h2 class="titlecard">Instrucciones del Juego</h2>
           <h4>Judar vs Jugador</h4>
           <p>
             Escribe tu nombre y selecciona tu ficha para juegar contra otros
