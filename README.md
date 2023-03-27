@@ -1,16 +1,16 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+ <img width=200px height=200px src="multimedia/tictactoe.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Proyecto Tic Tac Toe</h3>
 
 <div align="center">
 
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+<!-- [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE) -->
 
 </div>
 
@@ -25,98 +25,40 @@
 - [About](#about)
 - [Demo](https://cesarparada.github.io/Proyecto-Tic-Tac-Toe/)
 - [Preview](#Preview)
-<!-- - [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
+- [Getting Started](#getting_started)
 - [Authors](#authors)
-- [Acknowledgments](#acknowledgement) -->
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
 
-Se diseño una primera parte visual del juego Tic Tac Toe en un proyecto de formato digital adactado a distintas resoluciones de dispositivos.
+Se realizo diseño del clasico juego Tic Tac Toe en un proyecto digital adaptado a formato mobile first, con distinta vistas aplicando SPA y manipulaciòn del DOM
+
+## 🏁 Getting Started <a name = "getting_started"></a>
+
+Empiezas en la página principal donde tienes algo de información del juego, luego de presionar play te aparecerá una ventana para seleccionar el modo de juego, posteriormente ingresarás a una nueva ventana donde colocarás tu nombre y el de tu oponente, luego se jugará por turnos que se indicarán en la parte superior del tablero, se colocarán fichas para intentar hacer una combinación ganadora que redirigirá a la vista de Ganador.
 
 ## Preview
 
-<img src="multimedia/mobile (1).png" alt="">
-<img src="multimedia/mobile.png" alt="">
+<img src="multimedia/principal.png" alt="">
+<img src="multimedia/tablero.png" alt="">
+<img src="multimedia/vista ganador.png" alt="">
 <img src="multimedia/mobile.gif" alt="">
-
-<!-- ## 🏁 Getting Started <a name = "getting_started"></a>
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## 🎈 Usage <a name="usage"></a>
-
-Add notes about how to use the system.
-
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
+- [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
+- [HTLM5](https://developer.mozilla.org/es/docs/Glossary/HTML5)
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@cesarparada](https://github.com/Cesarparada)
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+## Contact
+
+<a href="mailto:cesard.0925@gmail.com">![Capture](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)</a>
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References -->
+- Professor. Fidel Gilart.

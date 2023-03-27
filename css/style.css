@@ -74,9 +74,9 @@
 }
 .title-home {
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   position: absolute;
-  top: 20px;
+  top: 25px;
   text-transform: uppercase;
   background: linear-gradient(to right, #30add0 0%, #12b942 100%);
   -webkit-background-clip: text;
@@ -282,4 +282,33 @@
 }
 #reset_Juego {
   margin-top: 330px;
+}
+@media (min-width: 480px) {
+  .title-home {
+    font-size: 26px;
+  }
+  .card .face {
+    width: 300px;
+  }
+  .container-playersVs,
+  .container-playersCpu {
+    width: 380px;
+  }
+  .contenedor {
+    width: 380px;
+  }
+  #reset,
+  #reset_Juego,
+  #btn-play2,
+  #btn-play1 {
+    width: 100px;
+  }
+  #reset_Juego {
+    margin-top: 420px;
+  }
+}
+@media (min-width: 800px) {
+  .title-home {
+    font-size: 32px;
+  }
 }

@@ -39,9 +39,9 @@ const getInicioHTML = () => {
         </div>
         <div class="face back">
           <h2 class="titlecard">Instrucciones del Juego</h2>
-          <h4>Judar vs Jugador</h4>
+          <h4>Jugador vs Jugador</h4>
           <p>
-            Escribe tu nombre y selecciona tu ficha para juegar contra otros
+            Escribe tu nombre y selecciona tu ficha para jugar contra otros
             jugadores, logrando hacer una secuencia de tres fichas para ganar.
           </p>
           <h4>Jugador vs CPU</h4>
