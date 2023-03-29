@@ -1,3 +1,4 @@
+//----------------Vista nombre jugadores--------------
 const getModel1HTML = () => {
   return `<div class="modal1"> 
                <div class="container-playersVs">
@@ -14,9 +15,9 @@ const getModel1HTML = () => {
 const getModel2HTML = () => {
   return `<div class="modal2"> 
             <div class="container-playersCpu">
-                <header Class="headerCpu"><h1>Player Vs Maquina</h1></header>
+                <header Class="headerCpu"><h1>Player Vs Máquina</h1></header>
                 <input type="text" placeholder="Player" id="player1" />
-                <input type="text" placeholder="Maquina" id="player2" />
+                <input type="text" placeholder="Máquina" id="player2" />
               <div id="container-btn-play">
                 <button id="btn-play2">Jugar</button>
               </div>
@@ -24,14 +25,14 @@ const getModel2HTML = () => {
          </div>
     `;
 };
-
+//-------- funcion render----------
 const renderModel1 = () => {
   root.innerHTML = getModel1HTML();
 };
 const renderModel2 = () => {
   root.innerHTML = getModel2HTML();
 };
-
+//-----------captura nombre--------
 const setPlayersEventos = () => {
   document.getElementById("btn-play1").addEventListener("click", () => {
     const namePlayer1 = document.getElementById("player1").value;
@@ -56,3 +57,4 @@ const setCpuEventos = () => {
     gameFunction();
   });
 };
+renderDraw();

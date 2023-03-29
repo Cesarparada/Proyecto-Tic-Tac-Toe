@@ -19,7 +19,7 @@ const game = {
   iconoVs: '<img class="versus" src="multimedia/players.png">',
   iconoCpu: '<img class="versus" src="multimedia/robot.png">',
 };
-
+//-----------------------Vista Principal----------------------
 const getInicioHTML = () => {
   return `
 <div class="container-home">
@@ -76,7 +76,7 @@ const getInicioHTML = () => {
     </div>
   `;
 };
-
+//---------------Botones modo juego-------------
 const setModoPlayers = () => {
   document.getElementById("versus-players").addEventListener("click", () => {
     const btn = document.getElementById("versus-players").value;

@@ -1,4 +1,5 @@
-const getGameHTML = () => {
+//-----------vista tablero---------
+getGameHTML = () => {
   return `
     <div class="caja">
             <div class="players_tablero">
@@ -12,16 +13,16 @@ const getGameHTML = () => {
                 </div>
             </div>
                    <div class="container">
-                      <button class="casilla"></button>
-                      <button class="casilla"></button>
-                      <button class="casilla"></button>
-                      <button class="casilla"></button>
-                      <button class="casilla"></button>
-                      <button class="casilla"></button>
-                      <button class="casilla"></button>
-                      <button class="casilla"></button>
-                      <button class="casilla"></button>
-                   </div>
+                      <button id="0" class="casilla"></button>
+                      <button id="1" class="casilla"></button>
+                      <button id="2" class="casilla"></button>
+                      <button id="3" class="casilla"></button>
+                      <button id="4" class="casilla"></button>
+                      <button id="5" class="casilla"></button>
+                      <button id="6" class="casilla"></button>
+                      <button id="7" class="casilla"></button>
+                      <button id="8" class="casilla"></button>
+                   </div>      
           <div class="buttonHome">
               <button onclick="reset()" id="reset">Reset</button>
               <a id="btn-inicio">
@@ -30,7 +31,7 @@ const getGameHTML = () => {
   </div>
     `;
 };
-//----------Funcion del tablero-----
+//----------Funcion del tablero----------
 
 const gameFunction = () => {
   const htmlCasillas = document.querySelectorAll(".casilla");
@@ -40,9 +41,9 @@ const gameFunction = () => {
     const uiTurno1 = document.getElementById("turno1");
     const uiTurno2 = document.getElementById("turno2");
 
-    if ((element.innerHTML == "")) {
+    if (element.innerHTML == "") {
       if (turno1) {
-        turno1= false;
+        turno1 = false;
         uiTurno1.innerHTML = game.player1.mark;
         uiTurno2.innerHTML = " ";
         element.innerHTML = game.player1.mark;
@@ -56,11 +57,11 @@ const gameFunction = () => {
         element.disabled = true;
         mapCasillas[element.id] = "o";
       }
-     
-     checkWinner(mapCasillas[element.id], mapCasillas);
 
-    };
-  };
+      Winner(mapCasillas[element.id], mapCasillas);
+      //  renderWinner();
+    }
+  }
 
   for (let i = 0; i < htmlCasillas.length; i++) {
     htmlCasillas[i].addEventListener("click", (event) => {
@@ -68,36 +69,34 @@ const gameFunction = () => {
       manageClick(element);
     });
   }
-  };
+};
 
-  
-  function reset() {
+function reset() {
   document.querySelectorAll(".container button").forEach((element) => {
     element.innerHTML = "";
     element.disabled = false;
   });
-  };
+}
 
-  function volverInicio() {
+function volverInicio() {
   document.getElementById("btn-inicio").addEventListener("click", () => {
     document.getElementById("btn-inicio").value;
     renderInicio();
     setModoCpu();
     setModoPlayers();
   });
-  };
-  const renderGame = () => {
+}
+const renderGame = () => {
   const btnPvP = document.getElementById("btn-play1");
   btnPvP.addEventListener("click", () => {
     root.innerHTML = getGameHTML();
     gameFunction();
-    
   });
-  };
-  const render2 = () => {
-  const btnCPU = document.getElementById("btn-play2")
-    btnCPU.addEventListener("click", () => {
-      root.innerHTML = getGameHTML();
-      gameFunction();
-    });
+};
+const render2 = () => {
+  const btnCPU = document.getElementById("btn-play2");
+  btnCPU.addEventListener("click", () => {
+    root.innerHTML = getGameHTML();
+    gameFunction();
+  });
 };

@@ -81,6 +81,7 @@
   background: linear-gradient(to right, #30add0 0%, #12b942 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: padding;
 }
 .card {
   display: flex;
@@ -311,4 +312,11 @@
   .title-home {
     font-size: 32px;
   }
+}
+#status{
+  width: 200px;
+  height: 200px;
+}
+#draw_title{
+  color: #f6c500;
 }
