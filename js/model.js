@@ -1,4 +1,4 @@
-//----------------Vista nombre jugadores--------------
+//------diseño vista modal player vs player--------------
 const getModel1HTML = () => {
   return `<div class="modal1"> 
                <div class="container-playersVs">
@@ -12,6 +12,7 @@ const getModel1HTML = () => {
             </div>
     `;
 };
+//------diseño vista modal player vs cpu--------------
 const getModel2HTML = () => {
   return `<div class="modal2"> 
             <div class="container-playersCpu">
@@ -25,14 +26,14 @@ const getModel2HTML = () => {
          </div>
     `;
 };
-//-------- funcion render----------
+//-------- funcion para los modales ----------
 const renderModel1 = () => {
   root.innerHTML = getModel1HTML();
 };
 const renderModel2 = () => {
   root.innerHTML = getModel2HTML();
 };
-//-----------captura nombre--------
+//-----------captura nombre y renderiza tablero--------
 const setPlayersEventos = () => {
   document.getElementById("btn-play1").addEventListener("click", () => {
     const namePlayer1 = document.getElementById("player1").value;
@@ -41,10 +42,12 @@ const setPlayersEventos = () => {
     game.player1.name = namePlayer1;
     game.player2.name = namePlayer2;
 
+    //-------llamdo render tablero----
     renderGame();
     gameFunction();
   });
 };
+
 const setCpuEventos = () => {
   document.getElementById("btn-play2").addEventListener("click", () => {
     const namePlayer = document.getElementById("player1").value;
@@ -57,4 +60,4 @@ const setCpuEventos = () => {
     gameFunction();
   });
 };
-renderDraw();
+

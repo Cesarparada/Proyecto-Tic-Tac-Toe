@@ -7,11 +7,6 @@
 
 <div align="center">
 
-<!-- [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE) -->
-
 </div>
 
 ---
@@ -40,9 +35,24 @@ Empiezas en la página principal donde tienes algo de información del juego, lu
 
 ## Preview
 
+vista Inicio.
+
 <img src="multimedia/principal.png" alt="">
+
+Vista Tablero de Juego.
+
 <img src="multimedia/tablero.png" alt="">
+
+Vista Ganador.
+
 <img src="multimedia/vista ganador.png" alt="">
+
+Vista Empate.
+
+<img src="multimedia/vista empate.png" alt="">
+
+Video demostración.
+
 <img src="multimedia/mobile.gif" alt="">
 
 ## ⛏️ Built Using <a name = "built_using"></a>

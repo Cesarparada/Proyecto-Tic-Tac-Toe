@@ -1,5 +1,6 @@
 const root = document.getElementById("root");
 
+//-----------variable que guarda nombres e iconos------
 const game = {
   player1: {
     name: null,
@@ -76,11 +77,13 @@ const getInicioHTML = () => {
     </div>
   `;
 };
-//---------------Botones modo juego-------------
+
+//---------------Botones modos de juego-------------
 const setModoPlayers = () => {
   document.getElementById("versus-players").addEventListener("click", () => {
     const btn = document.getElementById("versus-players").value;
 
+    //------llamado render modal1
     renderModel1();
     setPlayersEventos();
   });
@@ -89,15 +92,18 @@ const setModoCpu = () => {
   document.getElementById("versus-cpu").addEventListener("click", () => {
     const btn = document.getElementById("versus-cpu").value;
 
+    //------llamado render modal2
     renderModel2();
     setCpuEventos();
   });
 };
 
+//----------funcion render inicio---------
 const renderInicio = () => {
   root.innerHTML = getInicioHTML();
 };
 
+//---------llamado a la funcion render vista inico-------
 renderInicio();
 setModoCpu();
 setModoPlayers();

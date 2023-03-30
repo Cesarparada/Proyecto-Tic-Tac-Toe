@@ -1,4 +1,4 @@
-//-----------vista tablero---------
+//-----------Diseño vista tablero---------
 getGameHTML = () => {
   return `
     <div class="caja">
@@ -57,9 +57,10 @@ const gameFunction = () => {
         element.disabled = true;
         mapCasillas[element.id] = "o";
       }
+//-------check winner-------
 
       Winner(mapCasillas[element.id], mapCasillas);
-      //  renderWinner();
+       
     }
   }
 
@@ -70,7 +71,7 @@ const gameFunction = () => {
     });
   }
 };
-
+//-------Funciones de Botones reset y volver a inicio------
 function reset() {
   document.querySelectorAll(".container button").forEach((element) => {
     element.innerHTML = "";
@@ -86,6 +87,7 @@ function volverInicio() {
     setModoPlayers();
   });
 }
+//-----funcion render tablero ---------
 const renderGame = () => {
   const btnPvP = document.getElementById("btn-play1");
   btnPvP.addEventListener("click", () => {

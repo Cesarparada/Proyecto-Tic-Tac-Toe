@@ -1,9 +1,10 @@
+//------------diseño vista winner---------
 const getWinnerHTML = (player) => {
   return `<div class="vista_Winner">
                 <div class="container_winner">
                     <h1 class="winner_title">¡Eres el Ganador!</h1>
                     <div class="conainer_ganador">
-                        <h2 class="h2-winner">Felicidades,<span id="ganador">${player}</span>. Has ganado el juego.</h2>
+                        <h2 class="h2-winner">Felicidades, <span id="ganador">"${player}"</span>. Has ganado el juego.</h2>
                        <div class="imgWinner"></div> 
                     </div> 
                     <button id="reset_Juego" onclick="volverJuego()">Volver a Jugar</button>
@@ -11,42 +12,43 @@ const getWinnerHTML = (player) => {
             </div>
     `;
 };
-
+//--------------diseño vista empate----------
 const getEmpateHTML = () => {
   return `<div id="containerEmpate">
-           <div class="containerMessage"> <h2 id="empate_title">EMPATARON!! Jueguen de nuevo y consigan un ganador</h2></div>  
+           <div class="containerMessage"> <h2 id="empate_title">EMPATE!! Puedes Jugar de nuevo si lo deseas.</h2></div>  
                     <button id="reset_empate" onclick="resetEmpate()">Volver a Jugar</button>
                 </div>    
             </div>`;
 };
 
+//------------funcion render empate------------
 const renderEmpate = () => {
   root.innerHTML = getEmpateHTML();
 };
 
+//-----botón renderiza inicio desde empate------------
 function resetEmpate() {
   document.getElementById("reset_empate").addEventListener("click", () => {
-    // document.getElementById("reset_empate").value;
     renderInicio();
     setModoCpu();
     setModoPlayers();
   });
 }
 
+//-----botón renderiza inicio desde winner------------
 function volverJuego() {
   document.getElementById("reset_Juego").addEventListener("click", () => {
-    // document.getElementById("reset_Juego").value;
     renderInicio();
     setModoCpu();
     setModoPlayers();
   });
 }
+//---------funcion render winner-------------------
 const renderWinner = () => {
   root.innerHTML = getWinnerHTML();
 };
 
 // -----------checkWinner------------
-
 const Winner = (player, mapC) => {
   const uiRenderWinner = () => {
     if (player == "x") {
@@ -80,6 +82,7 @@ const Winner = (player, mapC) => {
     uiRenderWinner();
   }
 
+  //-------check empate-----
   if (
     mapC[0] != undefined &&
     mapC[1] != undefined &&
@@ -91,9 +94,8 @@ const Winner = (player, mapC) => {
     mapC[7] != undefined &&
     mapC[8] != undefined
   ) {
-
+    //--------Render vista empate-------
     renderEmpate();
   }
-
 };
-
+// renderWinner();
