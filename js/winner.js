@@ -13,18 +13,29 @@ const getWinnerHTML = (player) => {
 };
 
 const getEmpateHTML = () => {
-  return `<div id="status">
-            <h2 id="draw_title">Ha terminado en EMPATE!! Puedes reiniciar el juego con el boton si quieres</h2>  
+  return `<div id="containerEmpate">
+           <div class="containerMessage"> <h2 id="empate_title">EMPATARON!! Jueguen de nuevo y consigan un ganador</h2></div>  
+                    <button id="reset_empate" onclick="resetEmpate()">Volver a Jugar</button>
+                </div>    
             </div>`;
 };
-const renderEmpate = ()=>{
+
+const renderEmpate = () => {
   root.innerHTML = getEmpateHTML();
 };
 
+function resetEmpate() {
+  document.getElementById("reset_empate").addEventListener("click", () => {
+    // document.getElementById("reset_empate").value;
+    renderInicio();
+    setModoCpu();
+    setModoPlayers();
+  });
+}
 
 function volverJuego() {
   document.getElementById("reset_Juego").addEventListener("click", () => {
-    document.getElementById("reset_Juego").value;
+    // document.getElementById("reset_Juego").value;
     renderInicio();
     setModoCpu();
     setModoPlayers();
@@ -67,22 +78,22 @@ const Winner = (player, mapC) => {
   }
   if (mapC[2] == player && mapC[4] == player && mapC[6] == player) {
     uiRenderWinner();
-  } else if (
-    mapBoxes[0] != undefined &&
-    mapBoxes[1] != undefined &&
-    mapBoxes[2] != undefined &&
-    mapBoxes[3] != undefined &&
-    mapBoxes[4] != undefined &&
-    mapBoxes[5] != undefined &&
-    mapBoxes[6] != undefined &&
-    mapBoxes[7] != undefined &&
-    mapBoxes[8] != undefined
-  ) {
-    
-  
- 
-    uiDrawStatus.innerHTML = renderEmpate();
-
-
   }
+
+  if (
+    mapC[0] != undefined &&
+    mapC[1] != undefined &&
+    mapC[2] != undefined &&
+    mapC[3] != undefined &&
+    mapC[4] != undefined &&
+    mapC[5] != undefined &&
+    mapC[6] != undefined &&
+    mapC[7] != undefined &&
+    mapC[8] != undefined
+  ) {
+
+    renderEmpate();
+  }
+
 };
+
