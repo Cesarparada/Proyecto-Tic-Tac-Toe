@@ -1,5 +1,5 @@
 //-----------Diseño vista tablero---------
-getGameHTML = () => {
+const getGameHTML = () => {
   return `
     <div class="caja">
             <div class="players_tablero">
@@ -36,31 +36,29 @@ getGameHTML = () => {
 const gameFunction = () => {
   const htmlCasillas = document.querySelectorAll(".casilla");
   const mapCasillas = [];
-  let turno1 = true;
+  let turno1 = false;
   function manageClick(element) {
     const uiTurno1 = document.getElementById("turno1");
     const uiTurno2 = document.getElementById("turno2");
 
     if (element.innerHTML == "") {
       if (turno1) {
-        turno1 = false;
         uiTurno1.innerHTML = game.player1.mark;
         uiTurno2.innerHTML = " ";
-        element.innerHTML = game.player1.mark;
+        element.innerHTML = game.player2.mark;
         element.disabled = true;
         mapCasillas[element.id] = "x";
       } else {
-        turno1 = true;
-        uiTurno1.innerHTML = " ";
         uiTurno2.innerHTML = game.player2.mark;
-        element.innerHTML = game.player2.mark;
+        uiTurno1.innerHTML = " ";
+        element.innerHTML = game.player1.mark;
         element.disabled = true;
         mapCasillas[element.id] = "o";
       }
-//-------check winner-------
+      turno1 = !turno1;
+      //-------check winner-------
 
       Winner(mapCasillas[element.id], mapCasillas);
-       
     }
   }
 
